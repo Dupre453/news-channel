@@ -3,7 +3,7 @@ import './../scss/pages/SignIn.scss'
 import { ModalBlock} from "../components/modalBlock";
 
 
-const SignIn = () => {
+export const SignIn: React.FC = ():React.ReactElement => {
 
     const [visibleModal, setVisibleModal] = React.useState <'signIn' | 'signOut' | 'signUp'> ()
 
@@ -94,4 +94,3 @@ const SignIn = () => {
     );
 };
 
-export default SignIn;

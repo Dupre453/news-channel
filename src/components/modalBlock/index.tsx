@@ -26,6 +26,7 @@ export const ModalBlock:React.FC<ModalBlockProps> = ({
     return (
         <div open={visible} onClose={onClose} className='modal'>
             <div className='modal-title'>
+                {title}
                 <button onClick={onClose}>
                     <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +37,7 @@ export const ModalBlock:React.FC<ModalBlockProps> = ({
                               strokeLinejoin="round"/>
                     </svg>
                 </button>
-                {title}
+
             </div>
             <div className='modal-content'>
                 {children}
