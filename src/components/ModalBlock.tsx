@@ -1,15 +1,13 @@
 import React from 'react';
-import '../../scss/components/Modal.scss'
+import '../scss/components/Modal.scss'
 
 
 interface ModalBlockProps {
     title: string;
     children: React.ReactNode;
     visible?: boolean;
-    onClose: () => void
+    onClose: () => void;
 }
-
-
 
 export const ModalBlock:React.FC<ModalBlockProps> = ({
     title,
@@ -45,4 +43,5 @@ export const ModalBlock:React.FC<ModalBlockProps> = ({
         </div>
     );
 };
+
 

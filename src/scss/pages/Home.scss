@@ -203,10 +203,12 @@ margin-top: 10px;
   border: 0;
   border-radius: 30px;
   background-color: #c5c91f;
+  margin-left: 10px;
   color: white;
   font-size: 15px;
   cursor: pointer;
   padding: 8px 15px;
+
   &:hover{
     transition: background-color .2s ease-in-out;
     background-color: #d9de1e;
@@ -222,4 +224,27 @@ margin-top: 10px;
   padding-left: 10px;
   font-size: 18px;
   height: 100%;
+}
+.circle-progress{
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+}
+
+
+.circle-bg{
+  color: #dadada;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+}
+.circle-color{
+
+  color: #d9de1e;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
 }

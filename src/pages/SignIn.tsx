@@ -1,6 +1,6 @@
 import React from 'react';
 import './../scss/pages/SignIn.scss'
-import { ModalBlock} from "../components/modalBlock";
+import {ModalBlock} from "../components/ModalBlock";
 
 
 export const SignIn: React.FC = ():React.ReactElement => {
