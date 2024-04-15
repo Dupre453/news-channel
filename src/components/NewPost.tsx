@@ -54,7 +54,7 @@ const NewPost:React.FC = () => {
                 <div className='circle-progress'>
                     <CircularProgress
                         className='circle-color'
-                        variant="determinate"
+                        variant = "determinate"
                         size={20}
                         thickness={4}
                         value={text.length >= max_length ? 100 : textLimit}
@@ -62,7 +62,7 @@ const NewPost:React.FC = () => {
                     />
                     <CircularProgress
                         style={{color: "rgba(0,0,0,0.2)", position: 'absolute'}}
-                        variant="static"
+                        variant = "determinate"
                         size={20}
                         thickness={4}
                         value={100}
@@ -70,7 +70,7 @@ const NewPost:React.FC = () => {
                 </div>
                 <button
                     onClick={handleClickAddPost}
-                    disabled={text.length >= max_length}  /*починить*/
+                    disabled={text.length >= max_length}
                     className='new-post-btn'>
                     Запостить
                 </button>

@@ -5,24 +5,31 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import Like from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/IosShare";
 
+interface PostProps {
+    text: string;
+    user: {
+        fullname: string;
+        username: string;
+        avatarUrl: string;
+    }
+}
 
-
-const PostBlock:React.FC = () => {
+const PostBlock:React.FC = ({text, user}) => {
     return (
         <div className='post-block'>
             <div className='post-block__header'>
                 <div className='post-block__avatar'>
                     <Avatar alt="Аватар пользователся"
-                            src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+                            src={user.avatarUrl}/>
                 </div>
                 <div className='post-block__name'>
-                    <b>dsdsds</b>
-                    <span> @dadawd</span>
+                    <b>{user.fullname}</b>
+                    <span> @{user.username}</span>
                     <span>1ч</span>
                 </div>
             </div>
             <p className='post-block__desc'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus esse illo in molestiae nemo praesentium quaerat qui sit voluptate voluptates.
+                {text}
             </p>
 
             <div>
