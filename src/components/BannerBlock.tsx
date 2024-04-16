@@ -2,29 +2,16 @@ import React from 'react';
 import {Avatar, IconButton} from "@mui/material";
 import PersonAdd from "@mui/icons-material/PersonAddAlt";
 
+
+
 const BannerBlock: React.FC = () => {
     return (
         <div>
             <div>
                 <input className='search' type="text" placeholder='Поиск новостей...'/>
             </div>
-            <div className='current-block'>
-                <div className='current-block__title'>Актуальные темы</div>
-                <ul>
-                    <li>
-                        <span className='title-post'>Белка-летяга</span>
-                        <div className='current-block__post'>постов:<span>13278</span></div>
-                    </li>
-                    <li>
-                        <span className='title-post'>#Билли</span>
-                        <div className='current-block__post'>постов:<span>12208</span></div>
-                    </li>
-                    <li>
-                        <span className='title-post'>Россия</span>
-                        <div className='current-block__post'>постов:<span>10976</span></div>
-                    </li>
-                </ul>
-            </div>
+
+            {/*отредачить блок с баннерами. сделать отдельно только компонент с тэгами и убрать баннер блок*/}
 
             <div className='read-block'>
                 <div className='read-block__title'>Кого читать</div>

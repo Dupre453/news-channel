@@ -5,7 +5,7 @@ import {LoadingState, PostsState} from "./contracts/state";
 import {Action} from "redux";
 
 export enum PostsActionType {
-    SET_POSTS = 'posts/SET_POSTS',
+    SET_POSTS = 'tags/SET_POSTS',
     FETCH_POSTS = 'posts/FETCH_POSTS',
     SET_LOADING_STATE = 'posts/SET_LOADING_STATE',
 }

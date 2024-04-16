@@ -9,7 +9,7 @@ import {fetchPosts} from "../store/ducks/posts/actionCreators";
 import {selectIsPostsLoading, selectPostsItems} from "../store/ducks/posts/selectors";
 import {Post} from "../store/ducks/posts/contracts/state";
 import CircularProgress from '@mui/material/CircularProgress';
-
+import {fetchTags} from "../store/actualTags/actionCreators";
 
 
 const Home = (): React.ReactElement<Post> => {
@@ -18,10 +18,11 @@ const dispatch = useDispatch()
 const posts = useSelector(selectPostsItems)
 const isLoading = useSelector(selectIsPostsLoading)
 
-    const handleFetchPosts = () => dispatch(fetchPosts())
+
 
     React.useEffect(() => {
-        handleFetchPosts()
+       dispatch(fetchPosts())
+        dispatch(fetchTags())
     }, [dispatch])
     return (
         <div className='root'>
@@ -36,7 +37,7 @@ const isLoading = useSelector(selectIsPostsLoading)
                     posts.map((post) =>
                         <PostBlock
                             key={post.id}
-                           text={post.text}
+                            text={post.text}
                            user={post.user}
                         />)
                 }

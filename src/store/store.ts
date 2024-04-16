@@ -3,6 +3,7 @@ import createSagaMiddleware from 'redux-saga'
 import {rootReducer} from "./rootReducer";
 import rootSaga from "./saga";
 import {PostsState} from "./ducks/posts/contracts/state";
+import {TagsState} from "./actualTags/contracts/state";
 
 declare global {
     interface Window {
@@ -17,7 +18,8 @@ const composeEnhancers =
 const sagaMiddleware = createSagaMiddleware() //создать сагу
 
 export interface RootState {
-    posts: PostsState
+    posts: PostsState;
+    tags: TagsState;
 }
 
 

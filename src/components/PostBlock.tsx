@@ -14,7 +14,7 @@ interface PostProps {
     }
 }
 
-const PostBlock:React.FC = ({text, user}) => {
+const PostBlock:React.FC<PostProps> = ({text, user}) => {
     return (
         <div className='post-block'>
             <div className='post-block__header'>
